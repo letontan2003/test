@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  let arr = [];
+  let i = 0;
+
+  while(i < 10) {
+    arr = arr.concat(i);
+    i++;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {arr.map(i => <p key={i}>{i}</p>)}
     </div>
   );
 }
